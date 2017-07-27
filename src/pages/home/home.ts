@@ -30,6 +30,7 @@ public base64Image : string;
          this.loadMap();
     });
   }
+  
 showProfilePage() {
     this.navCtrl.push(GalleryPage);
 }
@@ -39,6 +40,7 @@ showProfilePage() {
 // }
 
 loadMap() {
+  console.log("loading map");
   this.geolocation.getCurrentPosition().then((resp) => {
  resp.coords.latitude
  resp.coords.longitude
@@ -232,5 +234,5 @@ deletePhoto(index){
     confirm.present();
   }
 //this.photos.splice(index, 1);
-
 }
+
